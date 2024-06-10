@@ -10,7 +10,7 @@ export const setPosts = createAsyncThunk('posts/setPosts', async (_, { getState 
   const state = getState();
   const { accessToken } = state.auth;
 
-  const response = await fetch('https://oauth.reddit.com/r/all/hot', {
+  const response = await fetch('https://oauth.reddit.com/r/home/hot', {
     headers: {
       'Authorization': `Bearer ${accessToken}`,
       'User-Agent': 'red-dit'
