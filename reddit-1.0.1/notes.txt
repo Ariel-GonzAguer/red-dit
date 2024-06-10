@@ -1,0 +1,14 @@
+user: 1ZIeoRNEvLMXs3kQidUQdA
+secret: Kxf3nlJNKs543yhAQukQkhT9CRp2Aw
+
+
+Colour palette:
+#eeeeff Very ligth Lavender
+#bdbde6 Lavender Grey 
+#6abdcd Seagull
+#313152 Lucky Point (very dark blue)
+#527bc5 Havelock Blue (darkish blue sky)
+#de3131 Persian Red
+#8383bd Moody Blue (like a sad blue?)
+#5a4a73 Mobster (opaque purple)
+#7362ac Scampi (less opaque purple)

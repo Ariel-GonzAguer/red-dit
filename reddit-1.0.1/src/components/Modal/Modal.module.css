@@ -1,0 +1,35 @@
+.modal {
+  border: 5px solid black;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #C594AA;
+  color: black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cancel {
+  background-color: pink;
+  padding: 2px;
+  margin: 10px auto;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.modal::backdrop {
+  background: black;
+}
+
+.form {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  bottom: 120px;
+  left: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 2rem;
+  width: 100vw;
+  background-color: #527bc5;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.errorBtn {
+  background-color: #de3131;
+  color: whitesmoke;
+  height: 1.5rem;
+  width: 120px;
+  margin-right: 20px;
+}
