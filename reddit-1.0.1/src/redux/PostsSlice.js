@@ -1,3 +1,4 @@
+// PostsSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -6,11 +7,11 @@ const initialState = {
   error: null
 };
 
-export const setPosts = createAsyncThunk('posts/setPosts', async (_, { getState }) => {
+export const setPosts = createAsyncThunk('posts/setPosts', async (subreddit = 'r/home', { getState }) => {
   const state = getState();
   const { accessToken } = state.auth;
 
-  const response = await fetch('https://oauth.reddit.com/r/home/hot', {
+  const response = await fetch(`https://oauth.reddit.com/${subreddit}`, {
     headers: {
       'Authorization': `Bearer ${accessToken}`,
       'User-Agent': 'red-dit'
@@ -21,20 +22,24 @@ export const setPosts = createAsyncThunk('posts/setPosts', async (_, { getState 
     throw new Error('Failed to fetch posts');
   }
 
-   const data = await response.json();
+  const data = await response.json();
   const posts = data.data.children.map(child => ({
+    totalChild: child.data,
     id: child.data.id,
     title: child.data.title,
-    imageUrl: child.data.url, // Assuming this is the URL of the original image
+    imageUrl: child.data.url,
+    author: child.data.author,
+    thumbnail: child.data.thumbnail,
     // Add other properties as needed
   }));
+  // console.log(subreddit)
 
   return posts;
 });
 
 const postsSlice = createSlice({
   name: 'posts',
-  initialState,
+  initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder

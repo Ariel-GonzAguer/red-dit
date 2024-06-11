@@ -1,13 +1,13 @@
+// MainContent-Container.jsx
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
 import styles from '../Content.module.css'
-// import { postExamples } from '../../../redux/examples'
 import Post from './Post'
 
-import { setPosts } from '../../../redux/PostsSlice'
-import { postsSelector, postErrorSelector, postLoadingSelector } from '../../../redux/PostsSlice'
+import { postsSelector, postErrorSelector, postLoadingSelector, setPosts } from '../../../redux/PostsSlice'
 
-export default function MainContent(z) {
+export default function MainContent() {
   const dispatch = useDispatch()
   const posts = useSelector(postsSelector)
   const postLoading = useSelector(postLoadingSelector)
@@ -20,8 +20,7 @@ export default function MainContent(z) {
   return (
     <>
       <section className={styles.mainContent}>
-        {postError && <h2>{postErrorSelector}</h2>}
-
+        {postError && <h2>{postError}</h2>}
         {
           postLoading
             ? <h2>Loading...</h2>
@@ -30,8 +29,6 @@ export default function MainContent(z) {
               <Post posts={posts} />
             </ul>)
         }
-
-
       </section>
     </>
   )

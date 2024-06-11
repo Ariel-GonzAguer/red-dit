@@ -30,14 +30,58 @@
 
 .searchInput {
   height: 2rem;
-  width: 80%;
+  width: auto;
   border-radius: 10px;
   padding: 0 15px;
+  margin-right: 15px;
 }
 
 .searchBtn {
   border-radius: 10px;
   padding: 5px;
- background-color: #7362ac;
- color: whitesmoke;
+  background-color: #7362ac;
+  color: whitesmoke;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  height: auto;
+  overflow-y: auto;
+}
+
+.modal ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal li {
+  list-style: none;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  padding: 15px;
+}
+
+.modal li:hover {
+  background-color: #6abdcd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.closeModalBtn {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #7362ac;
+  color: whitesmoke;
 }

@@ -1,3 +1,4 @@
+// SecondaryContent.jsx
 import React, { useEffect } from 'react'
 import styles from '../Content.module.css'
 // import { categoriesExamples } from '../../../redux/examples'

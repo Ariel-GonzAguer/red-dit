@@ -34,7 +34,7 @@ export const fetchAccessToken = createAsyncThunk(
 
 const authSlice = createSlice({
   name: 'auth',
-  initialState,
+  initialState: initialState,
   reducers: {
     setAccessToken: (state, action) => {
       state.accessToken = action.payload;

@@ -13,7 +13,7 @@ export const setSubcategories = createAsyncThunk('subcategories/setSubcategories
   const response = await fetch('https://oauth.reddit.com/subreddits/popular', {
     headers: {
       'Authorization': `Bearer ${accessToken}`,
-      'User-Agent': 'your-app-name'
+      'User-Agent': 'red-dit'
     }
   });
 
@@ -27,7 +27,7 @@ export const setSubcategories = createAsyncThunk('subcategories/setSubcategories
 
 const subcategoriesSlice = createSlice({
   name: 'subcategories',
-  initialState,
+  initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
