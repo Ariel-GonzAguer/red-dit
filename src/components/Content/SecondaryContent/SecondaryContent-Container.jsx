@@ -1,7 +1,6 @@
 // SecondaryContent.jsx
 import React, { useEffect } from 'react'
 import styles from '../Content.module.css'
-// import { categoriesExamples } from '../../../redux/examples'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { setSubcategories } from '../../../redux/SubcategoriesSlice'

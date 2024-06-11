@@ -2,14 +2,6 @@ import React from 'react'
 import styles from './Modal.module.css'
 
 export default function Modal({ setOpen, modalContent }) {
-  // This modal needs be passed an object like this:
-  /*   
-    const modalContent = {
-    text: 'Delete this card forever?',
-    close: {text: 'Cancel', class: 'cancel'},
-    button_Two: <button className={stylesModal.button_Two} onClick={() => { handleDelete(cardKeyToDelete); setOpen(false) }}>Delete</button>
-  }
-  */
 
   return (
     <>

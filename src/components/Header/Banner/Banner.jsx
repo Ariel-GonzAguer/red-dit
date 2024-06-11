@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../Header.module.css'
 import reddit from '../../../assets/reddit-logo-by-Md-Tanvirul-Haque.png'
 
-
 export default function Banner() {
 
   return (
