@@ -12,7 +12,7 @@ export const fetchAccessToken = createAsyncThunk(
   async (authCode) => {
     const clientId = '1ZIeoRNEvLMXs3kQidUQdA';
     const clientSecret = 'Kxf3nlJNKs543yhAQukQkhT9CRp2Aw';
-    const redirectUri = 'http://localhost:5173/';
+    const redirectUri = 'https://red-dit.netlify.app';
 
     const response = await fetch('https://www.reddit.com/api/v1/access_token', {
       method: 'POST',

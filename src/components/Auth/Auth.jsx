@@ -9,7 +9,7 @@ export default function Auth() {
   const error = useSelector((state) => state.auth.error);
 
   const clientId = '1ZIeoRNEvLMXs3kQidUQdA';
-  const redirectUri = 'http://localhost:5173/';
+  const redirectUri = 'https://red-dit.netlify.app';
   const state = Math.random().toString(36).substring(2); // Genera un string aleatorio
   const scope = 'read';
   const authUrl = `https://www.reddit.com/api/v1/authorize?client_id=${clientId}&response_type=code&state=${state}&redirect_uri=${encodeURIComponent(redirectUri)}&duration=temporary&scope=${scope}`;
