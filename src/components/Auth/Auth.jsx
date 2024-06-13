@@ -9,7 +9,7 @@ export default function Auth() {
   const error = useSelector((state) => state.auth.error);
 
   const clientId = '1ZIeoRNEvLMXs3kQidUQdA';
-  const redirectUri = 'https://red-dit.netlify.app';
+  const redirectUri = 'https://red-dit.netlify.app'; //''
   const state = Math.random().toString(36).substring(2); // Genera un string aleatorio
   const scope = 'read';
   const authUrl = `https://www.reddit.com/api/v1/authorize?client_id=${clientId}&response_type=code&state=${state}&redirect_uri=${encodeURIComponent(redirectUri)}&duration=temporary&scope=${scope}`;
@@ -35,14 +35,12 @@ export default function Auth() {
     window.localStorage.removeItem('token');
   };
 
+    console.log(error)
   return (
     <>
       {status === 'loading' && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {!authToken
-        ? <a href={authUrl}>Login with Reddit</a>
-        : <button onClick={logout}>LogOut</button>
-      }
+      {error && <p>Error: {error}. Log In again.</p>}
+      {!authToken && <a href={authUrl}>Login with Reddit</a>}
     </>
   );
 }

@@ -61,3 +61,14 @@
   width: 35px;
   padding: 1px;
 }
+
+@media only screen and (max-width: 395px) {
+  .secondaryContent {
+    display: none;
+  }
+
+  .mainContent {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

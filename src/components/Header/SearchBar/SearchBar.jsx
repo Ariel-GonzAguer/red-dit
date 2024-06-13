@@ -47,7 +47,7 @@ const SearchBar = () => {
 
 
   return (
-    <nav >
+    < >
       <form onSubmit={handleSubmit} className={styles.searchBar}>
         <label htmlFor="search" />
         <input
@@ -84,7 +84,7 @@ const SearchBar = () => {
         </ul>
         <button onClick={() => setModalIsOpen(false)} className={styles.closeModalBtn}>Close Modal</button>
       </Modal>
-    </nav>
+    </>
   );
 };
 
