@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import styles from '../Content.module.css'
 import Post from './Post'
+import SpinGIF from '../../../assets/SpinGIF.gif'
+
 
 import { postsSelector, postErrorSelector, postLoadingSelector, setPosts } from '../../../redux/PostsSlice'
 
@@ -23,7 +25,10 @@ export default function MainContent() {
         {postError && <h2>{postError}</h2>}
         {
           postLoading
-            ? <h2>Loading...</h2>
+            ? <>
+              <h2>Loading...</h2>
+              <img src={SpinGIF} alt='loading' />
+            </>
             :
             (<ul>
               <Post posts={posts} />

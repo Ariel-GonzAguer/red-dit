@@ -32,7 +32,6 @@ const SearchBar = () => {
       setError(null);
 
     } catch (error) {
-      console.error('Error fetching search results:', error);
       setError(error.message);
       setSearchResults([]);
     } finally {
@@ -70,7 +69,7 @@ const SearchBar = () => {
         className={styles.modal}
       >
         {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
+        {error && <p>Error: Empty search </p> }
         <h2>Your results</h2>
         <ul>
           {searchResults.map((result) => {
