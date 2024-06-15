@@ -23,10 +23,13 @@ export const fetchAccessToken = createAsyncThunk(
       body: `grant_type=authorization_code&code=${authCode}&redirect_uri=${encodeURIComponent(redirectUri)}`
     });
     const data = await response.json();
-    if (data.access_token) {
-      window.localStorage.setItem('token', data.access_token);
-      return data.access_token;
-    } else {
+
+    try {
+      if (data.access_token) {
+        window.localStorage.setItem('token', data.access_token);
+        return data.access_token;
+      }
+    } catch (error) {
       throw new Error('Failed to fetch access token');
     }
   }
@@ -44,6 +47,9 @@ const authSlice = createSlice({
       state.accessToken = null;
       state.isAuthenticated = false;
     },
+    setError: (state, action) => {
+      state.error = action.payload;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -62,5 +68,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { setAccessToken, clearAccessToken } = authSlice.actions;
+export const { setAccessToken, clearAccessToken, setError } = authSlice.actions;
+export const AccessTokenErrorSelector = state => state.auth.error;
 export default authSlice.reducer;

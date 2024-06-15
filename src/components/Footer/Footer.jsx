@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <p>red-dit by Ariel Gonzales Agüero</p>
+      <p>red-dit by Ariel Gonz Agüer</p>
       <ErrorBtn />
     </footer>
   )

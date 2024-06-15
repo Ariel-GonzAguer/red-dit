@@ -12,11 +12,11 @@ export default function ErrorBtn() {
     type: 'form',
     extra_content:
       <form onSubmit={(e) => { e.preventDefault(); alert('report sent. Thanks!'); setOpen(false) }}>
-        <label htmlFor='email'>Email:</label>
-        <input type='email' name='email' id='email'  placeholder='myemail@gmail.com' required />
+        <label htmlFor='email'>Email:</label><br />
+        <input type='email' name='email' id='email'  placeholder='myemail@gmail.com' required /><br />
 
-        <label htmlFor='message'>Describe the bug</label>
-        <textarea name='message' id='message' required />
+        <label htmlFor='message'>Please describe the error the best You can</label><br />
+        <textarea name='message' id='message' required /><br />
         <button type='submit'>Submit</button>
       </form>
   }
@@ -27,7 +27,7 @@ export default function ErrorBtn() {
         open && (<Modal setOpen={setOpen} modalContent={modalContent} type={[modalContent.type]} />)
       }
       <button className={styles.errorBtn} onClick={() => setOpen(true)}>
-        Report a bug
+        Report a error
       </button>
     </>
   )

@@ -6,6 +6,7 @@
   background-color: #C594AA;
   color: black;
   width: 90%;
+  height: 100px;
   margin: 0 auto;
 }
 
@@ -22,14 +23,42 @@
 }
 
 .form {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 300px;
   position: relative;
-  bottom: 120px;
+  bottom: 150px;
   left: 250px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 1.5rem;
   text-align: center;
+  border-radius: 25px;
+  background-color: #eeeeff;
 }
+
+/* .form input[email] {
+  color: #000;
+} */
+
+@media only screen and (max-width: 450px) {
+
+  .form {
+    position: relative;
+    bottom: 0px;
+    left: 50px;
+    margin: 0 auto;
+   }
+
+ }
+
+ @media only screen and (max-width: 1000px) {
+  .form {
+    position: absolute;
+    bottom: 150px;
+    right: 250px;
+    margin: 0 auto;
+   }
+ }

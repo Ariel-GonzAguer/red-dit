@@ -7,7 +7,7 @@ const initialState = {
   error: null
 };
 
-export const setPosts = createAsyncThunk('posts/setPosts', async (subreddit = 'r/home', { getState }) => {
+export const setPosts = createAsyncThunk('posts/setPosts', async (subreddit = 'r/popular', { getState }) => {
   const state = getState();
   const { accessToken } = state.auth;
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAccessToken, setAccessToken, clearAccessToken } from '../../redux/AccessTokenSlice';
+import { fetchAccessToken, setAccessToken, setError } from '../../redux/AccessTokenSlice';
 
 export default function Auth() {
   const dispatch = useDispatch();
@@ -16,8 +16,8 @@ export default function Auth() {
 
   useEffect(() => {
     const token = window.localStorage.getItem('token');
-
-    if (token) {
+    try {
+      if (token) {
       dispatch(setAccessToken(token));
     } else {
       const urlParams = new URLSearchParams(window.location.search);
@@ -27,15 +27,14 @@ export default function Auth() {
         dispatch(fetchAccessToken(accessCode));
       }
     }
+    } catch (error) {
+      setError(error);
+    }
+
+    
   }, [dispatch]);
 
-  const logout = (e) => {
-    e.preventDefault();
-    dispatch(clearAccessToken());
-    window.localStorage.removeItem('token');
-  };
-
-    console.log(error)
+    // console.log(error)
   return (
     <>
       {status === 'loading' && <p>Loading...</p>}
