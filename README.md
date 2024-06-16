@@ -1,5 +1,5 @@
 
-# Project Title
+# Red-dit
 
 Hello\
 This web app is part of CodeCademy's Front End Development Engineering curriculum.
@@ -27,7 +27,7 @@ For this website it was used:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/Ariel-GonzAguer/red-dit?tab=MIT-1-ov-file#readme)
 
 
 ## Wire Frame

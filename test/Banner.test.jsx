@@ -17,4 +17,5 @@ describe('Banner', () => {
     const img = screen.getByAltText('reddit logo');
     expect(img).toBeInTheDocument();
   });
+  
 });
