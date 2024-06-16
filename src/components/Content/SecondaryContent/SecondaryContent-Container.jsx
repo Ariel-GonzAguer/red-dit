@@ -22,7 +22,7 @@ export default function SecondaryContent() {
 
   return (
     <section className={styles.secondaryContent}>
-      <h2>Subcategories</h2>
+      <h2>Subreddits</h2>
       {subcategoriesError && <h2>{subcategoriesErrorSelector}</h2>}
 
       {

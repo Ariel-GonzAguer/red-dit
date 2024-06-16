@@ -28,6 +28,7 @@ const SearchBar = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       setSearchResults(data.data.children);
       setError(null);
 

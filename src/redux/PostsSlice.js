@@ -23,6 +23,7 @@ export const setPosts = createAsyncThunk('posts/setPosts', async (subreddit = 'r
   }
 
   const data = await response.json();
+  console.log(data)
   const posts = data.data.children.map(child => ({
     totalChild: child.data,
     id: child.data.id,
@@ -30,6 +31,7 @@ export const setPosts = createAsyncThunk('posts/setPosts', async (subreddit = 'r
     imageUrl: child.data.url,
     author: child.data.author,
     thumbnail: child.data.thumbnail,
+    numOfComments: child.data.num_comments,
     // Add other properties as needed
   }));
   // console.log(subreddit)
