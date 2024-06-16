@@ -18,11 +18,11 @@
   padding: 50px;
 }
 
-.logIn:hover {
+/* .logIn:hover {
   font-weight: bold;
   transform: scale(1.1);
-}
-
+} */
+/* 
 .logOut {
   width: 100px;
   height: 2rem;
@@ -43,4 +43,4 @@
 .logOut:hover {
   font-weight: bold;
   transform: scale(0.95);
-}
+} */

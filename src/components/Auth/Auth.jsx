@@ -40,7 +40,7 @@ export default function Auth() {
     <>
       {status === 'loading' && <p>Loading...</p>}
       {error && <p>Error: {error}. Log In again.</p>}
-      {!authToken && <a href={authUrl}>Login with Reddit</a>}
+      {!authToken && <a href={authUrl} className={styles.logIn}>Login with Reddit</a>}
     </>
   );
 }
