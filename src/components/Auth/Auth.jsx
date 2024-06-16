@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAccessToken, setAccessToken, setError } from '../../redux/AccessTokenSlice';
+import styles from './Auth.module.css';
 
 export default function Auth() {
   const dispatch = useDispatch();
