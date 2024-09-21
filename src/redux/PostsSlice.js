@@ -90,7 +90,7 @@ export const setPosts = createAsyncThunk(
     const response = await fetch(`https://oauth.reddit.com/${subreddit}`, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
-        'User-Agent': 'red-dit', // Asegúrate de que este User-Agent sea apropiado
+        // 'User-Agent': 'red-dit', // prueba III firefox
       },
     });
 
