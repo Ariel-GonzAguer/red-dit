@@ -13,7 +13,7 @@ export const setSubcategories = createAsyncThunk('subcategories/setSubcategories
   const response = await fetch('https://oauth.reddit.com/subreddits/popular', {
     headers: {
       'Authorization': `Bearer ${accessToken}`,
-      'User-Agent': 'red-dit'
+      // 'User-Agent': 'red-dit'
     }
   });
 
